@@ -14,31 +14,6 @@ nav, footer {
     color: #BFD7EA;
 }
 
-.uk-navbar-container {
-    background-color: #0A8754;
-}
-
-/* Burger Pic */
-.burger-pic {
-    text-align: center;
-}
-
-/* Burgers */
-.burger-info {
-    text-align: center;
-    margin: 0, 20%, 40px, 20%;
-}
-
-.burger-button {
-    color: red;
-}
-
-/* Section */
-.uk-section {
-    background-color: white;
-    text-align: center;
-}
-
 /* Footer */
 footer {
     text-align: center;
