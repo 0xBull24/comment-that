@@ -1,0 +1,45 @@
+/* Page Rules */
+html  {
+    background-color: #0A8754;
+}
+
+a, a:hover, a:visited, a:focus {
+    text-decoration: none;
+    color: #BFD7EA;
+}
+
+/* Navigation */
+nav, footer {
+    font-size: 24px;
+    color: #BFD7EA;
+}
+
+.uk-navbar-container {
+    background-color: #0A8754;
+}
+
+/* Burger Pic */
+.burger-pic {
+    text-align: center;
+}
+
+/* Burgers */
+.burger-info {
+    text-align: center;
+    margin: 0, 20%, 40px, 20%;
+}
+
+.burger-button {
+    color: red;
+}
+
+/* Section */
+.uk-section {
+    background-color: white;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+}
