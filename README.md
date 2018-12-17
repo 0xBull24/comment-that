@@ -33,6 +33,7 @@ Since this is deployed to Heroku you can just visit the site [here]()
 * [Mongoose](https://www.npmjs.com/package/mongoose) - Mongo DB ORM
 * [Cheerio](https://www.npmjs.com/package/cheerio) - Scraping Utility
 * [Axios](https://www.npmjs.com/package/axios) - HTTP Utility
+* [Dotenv](https://www.npmjs.com/package/dotenv) - Secrets Utility
 
 ## Authors
 
