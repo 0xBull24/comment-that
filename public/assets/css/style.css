@@ -1,15 +1,29 @@
 /* Page Rules */
-html  {
+html {
     background-color: #0A8754;
 }
 
-a, a:hover, a:visited, a:focus {
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+a,
+a:hover,
+a:visited,
+a:focus {
     text-decoration: none;
     color: #BFD7EA;
 }
 
 /* Navigation */
-nav, footer {
+nav,
+footer {
     font-size: 24px;
     color: #BFD7EA;
 }
