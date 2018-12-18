@@ -1,6 +1,6 @@
 /* Page Rules */
 html {
-    background-color: #0A8754;
+    background-color: #EFD6AC;
 }
 
 body {
@@ -21,6 +21,9 @@ a:focus {
     color: #BFD7EA;
 }
 
+.rosewood {
+    background-color: #6B0504;
+}
 /* Navigation */
 nav,
 footer {
