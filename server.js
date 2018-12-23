@@ -1,6 +1,7 @@
 // Dependencies
 const express = require('express');
 const axios = require('axios');
+const bodyParser = require('body-parser');
 var cheerio = require('cheerio');
 var mongoose = require('mongoose');
 const logger = require('morgan');
@@ -18,6 +19,7 @@ const app = express();
 // Middleware
 app.use(logger('dev'));
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded({extended: true}));
 
 // Routes
 
