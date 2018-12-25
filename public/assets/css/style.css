@@ -1,4 +1,8 @@
 /* Page Rules */
+* {
+    font-family: 'Questrial', sans-serif;
+}
+
 html {
     background-color: #EFD6AC;
 }
@@ -24,6 +28,14 @@ a:focus {
 .rosewood {
     background-color: #6B0504;
 }
+
+/* Home */
+
+.gif-image {
+    height: 50vh;
+    width: 50vh;
+}
+
 /* Navigation */
 nav,
 footer {
