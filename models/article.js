@@ -1,21 +1,32 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
+const comment = require('./comments');
 var Schema = mongoose.Schema;
 
 // Mongoose Model
 var ArticleSchema = new Schema ({
-    // Attributes for the schema
+    // Props for the schema
     title:{
         type: String,
         required: true,
         trim: true,
+        unique: true,
+        default: 'No Title',
     },
     link:{
         type: String,
         required: true,
         trim: true,
+        unique: true,
+        default: 'No Link',
     },
+    comments: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: comment,
+        }
+    ]
 });
 
-var Article = mongoose.model('Article', ArticleSchema);
-
+// Create the model and export 
+const Article = mongoose.model('Article', ArticleSchema);
 module.exports = Article;
