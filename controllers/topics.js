@@ -1,5 +1,5 @@
 // dependencies
-const db = require('../models');
+const db = require('../models/model');
 
 
 module.exports = app => {
