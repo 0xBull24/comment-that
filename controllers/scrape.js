@@ -1,5 +1,5 @@
 // dependencies
-const db = require("../models/model");
+const dataModels = require("../models");
 const axios = require("axios");
 const cheerio = require("cheerio");
 
@@ -9,13 +9,30 @@ module.exports = app => {
         // Grab site data
         axios.get("https://insideevs.com/").then(website => {
             const $ = cheerio.load(website.data);
-            
-            // Testing the cheerio load
-            articles = []
+
+            // Create new articles for each main article found on insideevs
+            // Create the article in the db
+            // Grab all the articles, sort, and render them to the topic bars
+
             $('.main-article').each((index, element) => {
-                articles.push($(element).find('.title').text().trim());
-            })
-            console.log(articles);
+                
+                const newArticle = {
+                    articleTitle: $(element).find('.title').text().trim(),
+                    articleLink: $(element).find('.title').attr('href'),
+                    tagline: $(element).find('.description').text().trim(),
+                    image: $(element).find('.image-col').find('img').attr('src'),
+                }
+
+                dataModels.Article.create(newArticle)
+                .then(article => {
+                    console.log('Created new article');
+                })
+                .catch(err => {
+                    if (err) {
+                        console.log('Here is the error', err);
+                    }
+                });
+            });
         });
         res.render("home");
     });

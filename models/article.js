@@ -5,19 +5,21 @@ var Schema = mongoose.Schema;
 // Mongoose Model
 var ArticleSchema = new Schema ({
     // Props for the schema
-    title:{
+    articleTitle:{
         type: String,
-        required: true,
-        trim: true,
-        unique: true,
         default: 'No Title',
     },
-    link:{
+    articleLink:{
         type: String,
-        required: true,
-        trim: true,
-        unique: true,
         default: 'No Link',
+    },
+    tagline: {
+        type: String,
+        default: 'No tagline',
+    },
+    image: {
+        type: String,
+        default: 'https://via.placeholder.com/250',
     },
     comments: [
         {
