@@ -27,7 +27,7 @@ app.set('view engine', 'handlebars');
 
 // Routes
 require('./controllers/scrape')(app);
-require('./controllers/topics')(app);
+require('./controllers/article')(app);
 
 
 // Start the the server
