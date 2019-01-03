@@ -21,6 +21,10 @@ var ArticleSchema = new Schema ({
         type: String,
         default: 'https://via.placeholder.com/250',
     },
+    createdAt: {
+        type: Date,
+        default: Date.now(),
+    },
     comments: [
         {
             type: Schema.Types.ObjectId,
