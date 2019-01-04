@@ -38,14 +38,13 @@ module.exports = app => {
                 createAt: 'desc'
             })
             .then(articles => {
-                console.log(articles);
+                res.render("home");
             })
         );
-        res.render("home");
     });
 
-    //   Catch all 
-    app.use('*', (req, res) => {
-        res.status(404).render('404');
-    });
+    // //   Catch all 
+    // app.get('*', (req, res) => {
+    //     res.status(404).render('404');
+    // });
 };
