@@ -27,10 +27,9 @@ module.exports = app => {
         // Create the comment in the db
         dataModels.Comment.create({name: req.body.name, comment: req.body.comment})
         .then(comment => {
-            console.log(comment);
             return dataModels.Article.findOneAndUpdate({ _id: req.body.id }, {$push: { comments: comment._id}} , { new: true});
         }).then(() => {
-             res.redirect(`/topics/${req.body.id}`);
+            res.redirect(`/topics/${req.body.id}`);
         }).catch(err => {
             if (err) {
                 console.log('Posting error', err);

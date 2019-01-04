@@ -10,7 +10,9 @@
 
     {{!-- Populated Comments --}}
     {{#if comments}}
-    {{#each comments}}
+    <ul class="collection">
+        {{#each comments}}
+    </ul>
     {{> comment-list}}
     {{/each}}
     {{else}}

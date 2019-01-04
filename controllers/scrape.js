@@ -5,7 +5,7 @@ const cheerio = require("cheerio");
 
 module.exports = app => {
     // Home page route
-    app.get("/home", (req, res) => {
+    app.get("/", (req, res) => {
         // Grab site data
         // Create new articles for each main article found on insideevs
         // Create the article in the db
@@ -24,7 +24,6 @@ module.exports = app => {
 
                 dataModels.Article.create(newArticle)
                     .then(article => {
-                        console.log('Created new article');
                     })
                     .catch(err => {
                         if (err) {
