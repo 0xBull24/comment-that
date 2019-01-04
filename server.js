@@ -14,7 +14,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Mongoose Database
-const mongodb = process.env.MONOGDB_URI || 'mongodb://localhost/comment-that';
+const mongodb = process.env.MONGODB_URI || 'mongodb://localhost/comment-that';
 mongoose.connect(mongodb);
 
 // Middleware
