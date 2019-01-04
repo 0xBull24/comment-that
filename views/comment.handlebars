@@ -1,21 +1,28 @@
 {{!-- Card based page --}}
 <div class="container s12 center-align comment-topic">
+
+    {{!-- News Article --}}
     {{#with topic}}
     <h3 class="articleTitle">{{articleTitle}}</h3>
     <img src="{{image}}">
     <p class="tagline">{{tagline}}</p>
     <h3 class="comments">Comments</h3>
+
+    {{!-- Populated Comments --}}
     {{#if comments}}
     {{#each comments}}
     {{> comment-list}}
     {{/each}}
     {{else}}
-        <p>Looks like there are no comments yet.</p>
+    <p>Looks like there are no comments yet.</p>
     {{/if}}
+
+    {{!-- New Comment Input --}}
     <input class="rosewood" placeholder="Enter your name..." id="username" type="text">
-    <input placeholder="Enter your comment..." id="newComment" type="text" class="validate">
-    <button class="btn waves-effect waves-light" type="submit" name="action" id="submitComment" data-id="{{_id}}">Send
+    <input placeholder="Enter your comment..." id="newComment" type="text" class="validate" required>
+    <button class="btn waves-effect waves-light rosewood" type="submit" id="submitComment" data-id="{{_id}}">Send
         <i class="material-icons right">send</i>
     </button>
     {{/with}}
+
 </div>
